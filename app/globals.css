@@ -3,18 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --primary: #00A2FF;
-  --secondary: #24E082;
-  --accent-1: #FF8961;
-  --accent-2: #BC61E6;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 3, 3, 5;
+  --background-end-rgb: 3, 3, 5;
 }
 
 body {
-  background-color: #030305;
   color: white;
+  background-color: #030305;
+  overflow-x: hidden;
 }
 
-/* CLASSE SEGURA: Usando CSS puro para evitar erro de build no servidor */
+/* 
+  IMPORTANTE: 
+  Aqui usamos CSS normal para criar o vidro e o texto colorido.
+  Isso evita aquele erro de build que tivemos antes.
+*/
+
 .glass-panel {
   background-color: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(16px);
